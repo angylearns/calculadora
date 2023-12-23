@@ -5,34 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
     <link rel="stylesheet" href="styles/style.css">
-    <script src="scripts/script.js"></script> 
+    <!-- <script src="scripts/script.js"></script>  -->
+    <!-- ↑ For operational reasons, I had to place the script below, as it was not working up here -->
 </head>
 <body>
     <main class="container">
         <h1>Calculator</h1>
         <section class="calculator">
-            <section class="calculator__display">0</section>
+
+            <input type="text" id="display" placeholder="0" disabled>
+            
             <section class="calculator__keyboard">
-                <button class="calculator__keys division">÷</button>
-                <button class="calculator__keys multiplication">x</button>
-                <button class="calculator__keys substraction">-</button>
-                <button class="calculator__keys sum">+</button>
-                <button class="calculator__keys numbers">7</button>
-                <button class="calculator__keys numbers">8</button>
-                <button class="calculator__keys numbers">9</button>
-                <button class="calculator__keys numbers">4</button>
-                <button class="calculator__keys numbers">5</button>
-                <button class="calculator__keys numbers">6</button>
-                <button class="calculator__keys numbers">1</button>
-                <button class="calculator__keys numbers">2</button>
-                <button class="calculator__keys numbers">3</button>
-                <button class="calculator__keys numbers">0</button>
-                <button class="calculator__keys">.</button>
-                <button class="calculator__keys">C</button>
-                <button class="calculator__keys equal">=</button>
+                <button class="calculator__keys" onclick="appendToDisplay('/')">/</button>
+                <button class="calculator__keys" onclick="appendToDisplay('*')">*</button>
+                <button class="calculator__keys" onclick="appendToDisplay('-')">-</button>
+                <button class="calculator__keys" onclick="appendToDisplay('+')">+</button>
+
+                <button class="calculator__keys" onclick="appendToDisplay('7')">7</button>
+                <button class="calculator__keys" onclick="appendToDisplay('8')">8</button>
+                <button class="calculator__keys" onclick="appendToDisplay('9')">9</button>
+                
+                <button class="calculator__keys" onclick="appendToDisplay('4')">4</button>
+                <button class="calculator__keys" onclick="appendToDisplay('5')">5</button>
+                <button class="calculator__keys" onclick="appendToDisplay('6')">6</button>
+                
+                <button class="calculator__keys" onclick="appendToDisplay('1')">1</button>
+                <button class="calculator__keys" onclick="appendToDisplay('2')">2</button>
+                <button class="calculator__keys" onclick="appendToDisplay('3')">3</button>
+                
+                <button class="calculator__keys" onclick="appendToDisplay('.')">.</button>
+                <button class="calculator__keys" onclick="clearDisplay()">C</button>
+                <button class="calculator__keys equal" onclick="calculateResult()">=</button>
+                <button class="calculator__keys" onclick="appendToDisplay('0')">0</button>
             </section>
-            <section id="aca">Acá</section>
         </section>
     </main>
+
+    <script src="scripts/script.js"></script>
 </body>
 </html>

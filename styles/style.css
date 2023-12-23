@@ -1,5 +1,3 @@
-/* TODO: Fix style */
-
 body {
     margin: 0;
     display: flex;
@@ -23,15 +21,15 @@ body {
     padding: 5px;
 }
 
-.calculator__display {
+#display {
+    width: 100%;
     background-color: white;
     margin-bottom: 6px;
-    height: 30px;
+    height: 60px;
     border-radius: 5px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 3px;
+    box-sizing: border-box;
+    border: 0;
+    padding: 10px;
 }
 
 .calculator__keyboard {
@@ -43,4 +41,14 @@ body {
 
 .calculator__keys.equal {
     grid-area: 2 / 4 / 6 / 5;
+}
+
+input,
+button {
+    font-size: 20px;
+    color: black;
+}
+
+button {
+    padding: 10px;
 }
